@@ -1,0 +1,46 @@
+HOTEL RECOMMENDATION PORTAL - USER INSTRUCTION GUIDE
+
+1) DATABASE SETUP:
+------------------
+Before using the project, make sure to set up the database.
+
+- Open your MySQL server (e.g., phpMyAdmin or any MySQL interface).
+- Import the provided SQL file (`hotel_portal.sql`) into your MySQL server.
+- This SQL file will create a database named `hotel_portal` (if not already existing) and a table called `reviews` with the following structure:
+
+    Columns:
+    - id (INT, AUTO_INCREMENT, PRIMARY KEY)
+    - city (VARCHAR)
+    - hotel (VARCHAR)
+    - overall_experience (INT)
+    - budget (VARCHAR)
+    - room_type (VARCHAR)
+
+Make sure the database is properly imported and ready before launching the web application.
+
+2) HOW THE PROJECT WORKS:
+--------------------------
+This project is divided into two major functional systems:
+
+a) Review System:
+   - Users can submit reviews for hotels by filling a simple form.
+   - They provide hotel name, city, budget range, room type, and an overall experience rating (e.g., 1–5).
+   - These reviews are stored in the `reviews` table and used later for recommendation logic.
+
+b) Recommendation System:
+   - The system asks users to input their preferences including location (city), budget, desired hotel rating, and room type.
+   - It then compares these preferences with the data in the `reviews` table.
+   - If matching hotels are found (with rating **equal to or below** the selected rating), they are shown as recommendations.
+   - If no hotels are found matching all preferences, the user is informed accordingly.
+
+The logic prioritizes hotels that best align with user preferences using filtering rules, enhancing the decision-making experience for travelers.
+
+3) COPYRIGHT AND CONTACT:
+--------------------------
+All rights to this project are reserved by the developer.
+
+If someone wants to reuse, contribute, or modify this project for public or commercial use, proper credit must be given. For permissions or any related discussions, please contact the developer via LinkedIn:
+
+LinkedIn: https://www.linkedin.com/in/sanket-ithape-742889342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+Unauthorized use without permission is strictly prohibited.
